@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Invocation Pattern</title>
+    <script>
+        var add = function(num1, num2) {
+            return num1 + num2;
+        }
+
+        function GetResult() {
+            array = [1, 4];
+            return add.apply(null, array);
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="document.getElementById('oResult').innerHTML = 
+    GetResult();")>Addition</button>
+    <br><br>
+
+    <p id="oResult"></p>
+</body>
+
+</html>

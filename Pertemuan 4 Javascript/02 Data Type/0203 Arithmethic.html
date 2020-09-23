@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Introduction</title>
+    <script>
+        function Add(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) + Number(inp2);
+        }
+        function Sub(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) - Number(inp2);
+        }
+        function Mul(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) * Number(inp2);
+        }
+        function Div(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) / Number(inp2);
+        }
+        function Mod(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) % Number(inp2);
+        }
+        function Exp(id, inp1, inp2) {
+            document.getElementById(id).value = Number(inp1) ** Number(inp2);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="iNumAdd1"> +
+    <input type="number" id="iNumAdd2">
+    <button type="button" onclick="Add('oRessAdd', document.getElementById('iNumAdd1').value, 
+    document.getElementById('iNumAdd2').value)">=</button>
+    <input type="number" id="oRessAdd" readonly>
+
+    <br><br>
+
+    <input type="number" id="iNumSub1"> -
+    <input type="number" id="iNumSub2">
+    <button type="button" onclick="Sub('oRessSub', document.getElementById('iNumSub1').value, 
+    document.getElementById('iNumSub2').value)">=</button>
+    <input type="number" id="oRessSub" readonly>
+
+    <br><br>
+
+    <input type="number" id="iNumMul1"> *
+    <input type="number" id="iNumMul2">
+    <button type="button" onclick="Mul('oRessMul', document.getElementById('iNumMul1').value, 
+    document.getElementById('iNumMul2').value)">=</button>
+    <input type="number" id="oRessMul" readonly>
+
+    <br><br>
+
+    <input type="number" id="iNumDiv1"> /
+    <input type="number" id="iNumDiv2">
+    <button type="button" onclick="Div('oRessDiv', document.getElementById('iNumDiv1').value, 
+    document.getElementById('iNumDiv2').value)">=</button>
+    <input type="number" id="oRessDiv" readonly>
+
+    <br><br>
+
+    <input type="number" id="iNumMod1"> %
+    <input type="number" id="iNumMod2">
+    <button type="button" onclick="Mod('oRessMod', document.getElementById('iNumMod1').value, 
+    document.getElementById('iNumMod2').value)">=</button>
+    <input type="number" id="oRessMod" readonly>
+
+    <br><br>
+
+    <input type="number" id="iNumExp1"> ^
+    <input type="number" id="iNumExp2">
+    <button type="button" onclick="Exp('oRessExp', document.getElementById('iNumExp1').value, 
+    document.getElementById('iNumExp2').value)">=</button>
+    <input type="number" id="oRessExp" readonly>
+</body>
+
+</html>

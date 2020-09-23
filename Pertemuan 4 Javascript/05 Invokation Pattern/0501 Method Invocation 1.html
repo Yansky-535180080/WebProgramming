@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Invocation Pattern</title>
+    <script>
+        var Obj = {
+            value : 0,
+            increment: function() {
+                this.value += 1;
+            }
+        }
+
+        function IncreaseValue() {
+            Obj.increment();
+        }
+
+        function Show() {
+            document.getElementById("oResult").innerHTML = Obj.value;
+        }
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="Obj.increment()">Increase</button>
+
+    <button type="button" onclick="IncreaseValue()">Increase</button>
+
+    <br><br>
+
+    <button type="button" onclick="Show()">Show</button>
+
+    <p id="oResult"></p>
+</body>
+
+</html>

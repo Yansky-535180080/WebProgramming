@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Object</title>
+    <script>
+        var Person = {
+            Email : "",
+            NIM: "",
+            Nama: "",
+            Hobbies: [],
+
+            AddBio: function(pEmail, pNIM, pNama) {
+                this.Email = pEmail;
+                this.NIM = pNIM;
+                this.Nama = pNama;
+            },
+
+            AddHobby: function(pHobby) {
+                this.Hobbies.push(pHobby);
+            },
+
+            Write: function() {
+                var str = "Bio: " + this.Email + ", " + this.NIM + ", " + this.Nama;
+                var hobb = "Hobbies: ";
+                var item;
+                for (item in this.Hobbies) {
+                    hobb += item + " ";
+                }
+                return str + " " + hobb;
+            }
+        }
+
+    function AddBioInfo(pEmail, pNIM, pNama) {
+        Person.AddBio(pEmail, pNIM, pNama);
+    }
+
+    function AddHobby(pHobby) {
+        Person.AddHobby(pHobby);
+    }
+
+    function LoadObject() {
+        document.getElementById("oResult").innerHTML = Person.Write();
+    }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="iEmail" placeholder="Masukkan Email">
+    <input type="text" id="iNama" placeholder="Masukkan nama">
+    <input type="text" id="iNIM" placeholder="Masukkan NIM">
+
+    <button type="button" onclick="AddBioInfo(
+        document.getElementById('iEmail').value, 
+        document.getElementById('iNama').value, 
+        document.getElementById('iNIM').value)">Add Bio Info</button>
+
+    <br><br>
+
+    <input type="text" id="iHobby" placeholder="Place your hobby here" style="width: 500px;">
+    <button onclick="Person.AddHobby(document.getElementById('iHobby').value)">Add</button>
+
+    <br><br>
+
+    <button type="button" onclick='LoadObject()'>Load</button>
+
+    <br><br>
+
+    <div id="oResult"></div>
+</body>
+
+</html>

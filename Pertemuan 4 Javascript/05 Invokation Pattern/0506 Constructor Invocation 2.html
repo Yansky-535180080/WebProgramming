@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Invocation Pattern</title>
+    <script>
+        function base() {
+            this.value = 100;
+        }
+
+        var child = new base();
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="document.getElementById('oResult').innerHTML = 
+    child.value;")>Addition</button>
+    <br><br>
+
+    <p id="oResult"></p>
+</body>
+
+</html>

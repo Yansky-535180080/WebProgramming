@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Syntax</title>
+    <script>
+        var str = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
+        function ForLoop(Iteration) {
+            for (i=0; i<Iteration; i++) {
+                document.getElementById("oResult").innerHTML += str + "<br>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="iLoop" placeholder="Type number of Iteration" style="width: 500px;">
+    <button type="button" onclick="ForLoop(document.getElementById('iLoop').value)">Go!</button>
+
+    <p id="oResult"></p>
+</body>
+
+</html>

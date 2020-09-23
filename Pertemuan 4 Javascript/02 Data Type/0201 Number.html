@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Introduction</title>
+    <script>
+        function changeContent(id, num) {
+            var x;
+            x = 3;
+            var res = num + x;
+            document.getElementById(id).innerHTML = "3 + " + num + " = " + res;
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="changeContent('cLine1', 500)">
+        Go!</button>
+
+    <p id="cLine1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum</p>
+</body>
+
+</html>

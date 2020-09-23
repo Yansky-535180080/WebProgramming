@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Syntax</title>
+    <script>
+        var hobbies = [];  
+        function AddHobby(pHobby) {
+            hobbies.push(pHobby);
+            document.getElementById("iHobby").value = "";
+            document.getElementById("iHobby").focus();
+            console.log(hobbies.length);
+        }
+
+        function InLoop() {
+            var item;
+            document.getElementById("oResult").innerHTML = "";
+            for (item in hobbies) {
+                document.getElementById("oResult").innerHTML += item + "<br>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="iHobby" placeholder="Add your hobbies" style="width: 500px;">
+    <button type="button" onclick="AddHobby(document.getElementById('iHobby').value)">Add</button>
+    <button type="button" onclick="InLoop()">Show all</button>
+
+    <br><br>
+    <p id="oResult"></p>
+</body>
+
+</html>

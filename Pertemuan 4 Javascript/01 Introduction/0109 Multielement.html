@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Introduction</title>
+    <script>
+        function changeAll(str) {
+            document.getElementById("cLine1").innerHTML = str;
+            document.getElementById("cLine2").innerHTML = str;
+            document.getElementById("cLine1").className = "MakeRed";
+            document.getElementById("cLine2").className = "MakeRed";
+        }
+    </script>
+    <style>
+        .MakeRed {
+            color: red;
+        }
+
+        .Hide {
+            visibility: hidden;
+        }
+
+        .Show {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="cLine1">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum</p>
+
+    <p id="cLine2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <button type="button" onclick="changeAll('Hello Hai')">Change All</button>
+</body>
+
+</html>

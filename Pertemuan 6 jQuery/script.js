@@ -1,6 +1,6 @@
 const API_KEY = "3b2ddae6e88ec7c33b41adaece5df446";
 
-// Retrieve all movies genres when the documentis ready
+// Retrieve all movies genres when the document is ready
 var genres = [];
 $(() => {
     $.get('https://api.themoviedb.org/3/genre/movie/list', { api_key: API_KEY })

@@ -51,7 +51,7 @@ $('#searchButton').click((e) => {
         })
 
         .fail((e) => {
-            $('#error').text(`!!! LOL ${e.status_message}`);
+            $('#error').text(`!!! ${e.status_message}`);
         })
 
         .always(() => {

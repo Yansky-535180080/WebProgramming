@@ -4,6 +4,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     if (!req.session.user) {
+        req.session.destination = '/todo';
         res.redirect('auth/login');
     }
     else {

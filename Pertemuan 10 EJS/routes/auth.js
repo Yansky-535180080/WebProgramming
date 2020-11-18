@@ -29,7 +29,8 @@ router.post('/login', async (req, res) => {
         req.session.user = "admin";
 
         // redirect to member area
-        res.redirect('/');
+        //res.redirect('/');
+        res.redirect(req.session.destination);
     }
     else {
         // TODO: render the login page with error information

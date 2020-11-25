@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 
 const router = express.Router();
@@ -29,8 +30,7 @@ router.post('/login', async (req, res) => {
         req.session.user = "admin";
 
         // redirect to member area
-        //res.redirect('/');
-        res.redirect(req.session.destination);
+        res.redirect(req.session.url);
     }
     else {
         // TODO: render the login page with error information
